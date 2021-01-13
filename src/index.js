@@ -27,8 +27,7 @@ const client = new Client();
   var guild = client.guilds.cache.get(guildId);
   var generalChannel = guild.channels.cache.get(generalChannelId);
 
-  app.post("/", jsonParser, (req, res) => {
-    console.log(req.body);
+  app.get("/", (req, res) => {
     res.send("salut");
   });
 
